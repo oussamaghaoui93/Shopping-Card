@@ -35,3 +35,21 @@ document.querySelectorAll('.fa-minus-circle').forEach(button => {
     });
 });
 
+
+function getRandomColor(id) {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    const heartbtn = document.getElementById(id);
+    heartbtn.style.color = color;
+
+}
+function removeElementById(id) {
+    var elem = document.getElementById(id);
+    return elem.parentNode.removeChild(elem);
+
+
+}
+
